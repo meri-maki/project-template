@@ -1,0 +1,20 @@
+{
+    "extends": "stylelint-config-recommended-scss",
+    "plugins": ["stylelint-scss"],
+    "rules": {
+        "indentation": 4,
+        "no-descending-specificity": null,
+        "no-empty-source": null,
+        "selector-class-pattern": null,
+        "no-missing-end-of-source-newline": null,
+        "keyframes-name-pattern": null,
+        "comment-no-empty": null,
+        "custom-property-pattern": null,
+        "no-invalid-double-slash-comments": null,
+        "scss/double-slash-comment-whitespace-inside": "always",
+        "no-duplicate-selectors": true,
+        "keyframe-block-no-duplicate-selectors": true,
+        "declaration-block-no-duplicate-properties": true,
+        "declaration-block-no-duplicate-custom-properties": true
+    }
+}

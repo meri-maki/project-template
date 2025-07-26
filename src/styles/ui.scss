@@ -1,0 +1,466 @@
+@use "animations/moving";
+
+.app {
+    position: relative;
+
+    .wrapperWidgets {
+        position: relative;
+        max-width: var(--max-app-width);
+        margin: 0 auto;
+    }
+}
+
+#root {
+    --section_top_p: 12px;
+
+    &.fullscreen {
+        --section_top_p: 62px !important; //100
+
+        [data-story-wrapper] {
+            top: 76px !important;
+        }
+    }
+}
+
+[data-story] {
+    width: 100%;
+    height: 100%;
+    background-size: cover !important;
+    padding: 16px;
+    padding-bottom: 32px;
+    padding-top: 72px;
+    transition: background 0.5s;
+    border-radius: 0 0 32px 32px;
+    justify-content: space-evenly;
+
+    [data-float-base] {
+        min-height: calc(100vh - 8px);
+    }
+
+    * {
+        z-index: 2;
+    }
+}
+
+//text
+h4 {
+    color: var(--Zink-200);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+//caption
+h5 {
+    color: var(--Zink-400);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+
+    &.mb-4 {
+        margin-bottom: 4px;
+    }
+}
+
+[data-num] {
+    text-wrap: nowrap;
+    white-space: nowrap;
+}
+
+[data-wrap] {
+    flex-wrap: wrap;
+}
+
+[data-invert] {
+    filter: invert(1);
+}
+
+[data-bold] {
+    font-weight: bold;
+}
+
+[data-j-c] {
+    justify-content: center;
+}
+
+[data-j-end] {
+    justify-content: flex-end;
+}
+
+[data-j-st] {
+    justify-content: flex-start;
+}
+
+span,
+b {
+    &.violet-400 {
+        color: var(--Blue-Violet-400);
+    }
+
+    &.yellow-400,
+    &.gold {
+        color: var(--Yellow-400);
+    }
+
+    &.ribbon-300 {
+        color: var(--Blue-Ribbon-300);
+    }
+
+    &.picton-200 {
+        color: var(--Picton-Blue-200);
+    }
+
+    &.green-200 {
+        color: var(--Chateau-Green-200);
+    }
+
+    &.green-400 {
+        color: var(--Chateau-Green-400, #4ade81);
+    }
+
+    &.picton-300,
+    &.diamond,
+    &.silver {
+        color: var(--Picton-Blue-300);
+    }
+
+    &.white {
+        color: white;
+    }
+
+    &.zink-400 {
+        color: var(--Zink-400);
+    }
+
+    &.capitalize {
+        text-transform: capitalize;
+    }
+
+    &.uncapitalize {
+        text-transform: lowercase;
+    }
+}
+
+.blur {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+    animation: fade 0.3s linear forwards;
+}
+
+img,
+svg {
+    user-select: none;
+    pointer-events: none;
+}
+
+.toast {
+    border-radius: 12px;
+    z-index: 1000;
+    max-width: 468px;
+
+    div {
+        justify-content: flex-start !important;
+        margin: 0 !important;
+    }
+
+    > div {
+        width: 100%;
+    }
+}
+
+[data-no-select] {
+    user-select: none;
+    pointer-events: none;
+}
+
+[data-w100] {
+    width: 100%;
+}
+
+[data-object] {
+    will-change: transform;
+    position: absolute;
+
+    > img {
+        object-fit: contain;
+    }
+}
+
+[data-object]:nth-child(1),
+[data-object]:nth-child(5),
+[data-object]:nth-child(10) {
+    animation: moving1 28s ease-in-out infinite;
+}
+
+[data-object]:nth-child(2),
+[data-object]:nth-child(6),
+[data-object]:nth-child(9) {
+    animation: moving2 25s ease-in-out infinite reverse;
+}
+
+[data-object]:nth-child(3),
+[data-object]:nth-child(4) {
+    animation: moving3 32s ease-in-out infinite;
+}
+
+[data-object]:nth-child(7),
+[data-object]:nth-child(8) {
+    animation: moving4 23s linear infinite reverse;
+}
+
+#rewardId,
+#extraRewardId {
+    display: flex;
+    align-self: center;
+    width: 10px;
+
+    span {
+        filter: sepia(1) saturate(2) !important;
+    }
+}
+
+#extraRewardId {
+    display: flex;
+    align-self: center;
+    width: 10px;
+}
+
+/* ------------------------ z-index data-index-* ----------------------- */
+$z-values: 0, 1, 2, 3, 4, 99;
+
+$default-z: 0;
+
+@mixin index-z($z: $default-z) {
+    @if $z ==$default-z {
+        [data-index] {
+            z-index: 0;
+        }
+    } @else {
+        [data-index-#{$z}] {
+            z-index: #{$z};
+        }
+    }
+}
+
+@include index-z();
+
+@each $z in $z-values {
+    @include index-z($z);
+}
+
+/* ------------------------ display: column data-column-* ----------------------- */
+$gap-values: 2, 4, 6, 8, 10, 12, 16, 18, 20, 24, 32, 34, 36, 40, 48, 80;
+
+$default-gap: 0;
+
+@mixin column-gap($gap: $default-gap) {
+    @if $gap ==$default-gap {
+        [data-column] {
+            display: flex;
+            flex-direction: column;
+
+            span {
+                &[aria-live="polite"][aria-busy="true"] {
+                    display: flex;
+                    flex-direction: column;
+
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+    } @else {
+        [data-column-#{$gap}] {
+            display: flex;
+            flex-direction: column;
+            gap: #{$gap}px;
+
+            span {
+                &[aria-live="polite"][aria-busy="true"] {
+                    display: flex;
+                    flex-direction: column;
+
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include column-gap();
+
+@each $gap in $gap-values {
+    @include column-gap($gap);
+}
+
+/* ------------------------ display: flex data-flex-* ----------------------- */
+@mixin flex-gap($gap: $default-gap) {
+    @if $gap ==$default-gap {
+        [data-flex] {
+            display: flex;
+        }
+    } @else {
+        [data-flex-#{$gap}] {
+            display: flex;
+            gap: #{$gap}px;
+        }
+    }
+}
+
+@include flex-gap();
+
+@each $gap in $gap-values {
+    @include flex-gap($gap);
+}
+
+/* ------------------------ border-radius (data-b-*) ------------------------ */
+$border-radius-values: 4, 6, 8, 12, 16, 20, 24, 32, 34, 50;
+
+@mixin border-radius($radius: $default-gap) {
+    @if $radius ==$default-gap {
+        [data-b] {
+            border-radius: 0;
+        }
+    } @else if $radius ==50 {
+        // 50% border-radius
+        [data-b-#{$radius}] {
+            border-radius: 50%;
+        }
+    } @else {
+        // pixel-based border-radius
+        [data-b-#{$radius}] {
+            border-radius: #{$radius}px;
+        }
+    }
+}
+
+@include border-radius();
+
+@each $radius in $border-radius-values {
+    @include border-radius($radius);
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+[data-pointer] {
+    cursor: pointer;
+}
+
+[data-al-c] {
+    align-items: center;
+}
+
+[data-al-end] {
+    align-items: flex-end;
+}
+
+[data-al-bs] {
+    align-items: baseline;
+}
+
+[data-j-sb] {
+    justify-content: space-between;
+}
+
+[data-center-flex] {
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-1,
+[data-flex-full] {
+    flex: 1;
+}
+
+.op-5 {
+    opacity: 0.5;
+}
+
+[data-op-10] {
+    opacity: 0.3;
+}
+
+[data-op-3] {
+    opacity: 0.3;
+}
+
+[data-op-5] {
+    opacity: 0.5;
+}
+
+[data-op-6] {
+    opacity: 0.6;
+}
+
+[data-op-8] {
+    opacity: 0.8;
+}
+
+[data-rel] {
+    position: relative;
+}
+
+[data-absolute] {
+    position: absolute;
+}
+
+[data-fixed] {
+    position: fixed;
+}
+
+[data-b-50] {
+    border-radius: 50%;
+}
+
+[data-b-4] {
+    border-radius: 4px;
+}
+
+[data-b-6] {
+    border-radius: 6px;
+}
+
+[data-b-8] {
+    border-radius: 8px;
+}
+
+[data-b-12] {
+    border-radius: 12px;
+}
+
+[data-b-16] {
+    border-radius: 16px;
+}
+
+[data-b-20] {
+    border-radius: 20px;
+}
+
+[data-b-24] {
+    border-radius: 24px;
+}
+
+[data-b-32] {
+    border-radius: 32px;
+}
+
+[data-b-34] {
+    border-radius: 32px;
+}
+
+@media screen and (max-width: 378px) {
+    section {
+        padding-bottom: 24px;
+    }
+}

@@ -1,0 +1,71 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "[javascript]": {
+        "editor.formatOnSave": true
+    },
+    "[javascriptreact]": {
+        "editor.formatOnSave": true
+    },
+    "folders": [
+        {
+            "name": "wrapped",
+            "path": "."
+        }
+    ],
+    "settings": {
+        "editor.parameterHints.enabled": true,
+        "cssVarriablesAutocomplete.files": ["./src/styles/helpers.scss"],
+        "cssVarriablesAutocomplete.languageModes": ["css", "postcss", "scss"],
+        "i18next.i18nPaths": "/Users/anastasiazhuravleva/Documents/GitHub/toon-wrapped-frontend/release/locales,/Users/anastasiazhuravleva/Documents/GitHub/toon-wrapped-frontend/src/locales",
+        "better-comments.tags": [
+            {
+                "tag": "!",
+                "color": "#FF2D00",
+                "strikethrough": false,
+                "underline": false,
+                "backgroundColor": "transparent",
+                "bold": false,
+                "italic": false
+            },
+            {
+                "tag": "?",
+                "color": "#3498DB",
+                "strikethrough": false,
+                "underline": false,
+                "backgroundColor": "transparent",
+                "bold": false,
+                "italic": false
+            },
+            {
+                "tag": "//",
+                "color": "#474747",
+                "strikethrough": true,
+                "underline": false,
+                "backgroundColor": "transparent",
+                "bold": false,
+                "italic": false
+            },
+            {
+                "tag": "todo",
+                "color": "#FF8C00",
+                "strikethrough": false,
+                "underline": false,
+                "backgroundColor": "transparent",
+                "bold": false,
+                "italic": false
+            },
+            {
+                "tag": "*",
+                "color": "#98C379",
+                "strikethrough": false,
+                "underline": false,
+                "backgroundColor": "transparent",
+                "bold": false,
+                "italic": false
+            }
+        ],
+        "i18n-ally.localesPaths": ["src/locales"],
+        "i18n-ally.keystyle": "flat"
+    }
+}

@@ -1,0 +1,11 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Run your test script
+npm test
+
+# Stage any changes made by the test script
+git add .
+
+# Re-stage any files that were modified by the test script
+git update-index --again

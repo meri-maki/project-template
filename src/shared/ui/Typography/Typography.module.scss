@@ -1,0 +1,160 @@
+.LargeTitle,
+.MediumTitle,
+.Title,
+.Text,
+.Caption {
+    color: var(--Zink-50);
+
+    &.center {
+        text-align: center !important;
+    }
+
+    &.left {
+        text-align: left;
+    }
+
+    &.right {
+        text-align: right;
+    }
+
+    &.regular {
+        font-weight: 400;
+    }
+
+    &.semibold {
+        font-weight: 600;
+    }
+
+    &.bold {
+        font-weight: 700;
+    }
+
+    &.ZINK_50 {
+        color: var(--Zink-50);
+    }
+
+    &.ZINK_200 {
+        color: var(--Zink-200);
+    }
+
+    &.ZINK_300 {
+        color: var(--Zink-300);
+    }
+
+    &.ZINK_400 {
+        color: var(--Zink-400);
+    }
+
+    &.ZINK_500 {
+        color: var(--Zink-500);
+    }
+
+    &.ZINK_950 {
+        color: var(--Zink-950);
+    }
+
+    &.YELLOW_300 {
+        color: var(--Yellow-300);
+    }
+
+    &.YELLOW_400 {
+        color: var(--Yellow-400);
+    }
+
+    &.YELLOW_600 {
+        color: var(--Yellow-600);
+    }
+
+    &.ULTRARARE {
+        color: var(--rarity-legendary-acent);
+    }
+
+    &.PICTON_50 {
+        color: var(--Picton-Blue-50);
+    }
+
+    &.PICTON_200 {
+        color: var(--Picton-Blue-200);
+    }
+
+    &.PICTON_300 {
+        color: var(--Picton-Blue-300);
+    }
+
+    &.GREEN_400 {
+        color: var(--Chateau-Green-400);
+    }
+
+    &.GREEN_500 {
+        color: var(--Chateau-Green-500);
+    }
+
+    &.VIOLET_200 {
+        color: var(--Electric-Violet-200);
+    }
+
+    &.VIOLET_300 {
+        color: var(--Electric-Violet-300);
+    }
+
+    &.AMARANTH_200 {
+        color: var(--Amaranth-200);
+    }
+
+    &.AMARANTH_300 {
+        color: var(--Amaranth-300);
+    }
+
+    &.BLUE_200 {
+        color: var(--Blue-Ribbon-200);
+    }
+
+    &.BLUE_300 {
+        color: var(--Blue-Ribbon-300);
+    }
+
+    &.YELLOW_200 {
+        color: var(--Yellow-200);
+    }
+
+    &.WHITE-60 {
+        color: #ffffff99;
+    }
+}
+
+.LargeTitle {
+    font-size: 32px;
+    line-height: 40px;
+    z-index: 1;
+}
+
+.MediumTitle {
+    font-size: 28px;
+    line-height: 32px;
+    z-index: 1;
+}
+
+.Title {
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    z-index: 1;
+}
+
+.Text {
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-align: left;
+}
+
+h3.Text {
+    display: initial;
+}
+
+.Caption {
+    font-size: 12px;
+    line-height: 16px;
+}

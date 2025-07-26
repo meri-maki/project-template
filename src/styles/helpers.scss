@@ -1,0 +1,144 @@
+:root {
+    --max-app-width: 600px;
+    --Zink-50: #fafafa;
+    --Zink-100: #f4f4f5;
+    --Zink-200: #e4e4e7;
+    --Zink-300: #d4d4d8;
+    --Zink-400: #a1a1aa;
+    --Zink-500: #71717a;
+    --Zink-600: #52525b;
+    --Zink-700: #3f3f46;
+    --Zink-800: #27272a;
+    --Zink-900: #18181b;
+    --Zink-950: #000;
+    --white: rgb(255 255 255 / 100%);
+    --black: rgb(0 0 0 / 100%);
+    --Yellow-50: #fffdeb;
+    --Yellow-100: #fff4c6;
+    --Yellow-200: #ffe688;
+    --Yellow-300: #ffd44a;
+    --Yellow-400: #ffc229;
+    --Yellow-500: #f99e07;
+    --Yellow-600: #dd7602;
+    --Yellow-700: #b75206;
+    --Yellow-800: #943e0c;
+    --Yellow-900: #7a330d;
+    --Yellow-950: #461a02;
+    --Amaranth-50: #fff1f4;
+    --Amaranth-100: #ffe4ea;
+    --Amaranth-200: #fecdd8;
+    --Amaranth-300: #fda4b8;
+    --Amaranth-400: #fb718f;
+    --Amaranth-500: #f43f67;
+    --Amaranth-600: #e11d48;
+    --Amaranth-700: #be1238;
+    --Amaranth-800: #9f1231;
+    --Amaranth-900: #88132d;
+    --Amaranth-950: #4c0515;
+    --Blue-Violet-50: #f0f4ff;
+    --Blue-Violet-100: #e2e0ff;
+    --Blue-Violet-200: #cac7fe;
+    --Blue-Violet-300: #aaa5fc;
+    --Blue-Violet-400: #8881f8;
+    --Blue-Violet-500: #6b63f1;
+    --Blue-Violet-600: #4f46e5;
+    --Blue-Violet-700: #4038ca;
+    --Blue-Violet-800: #3730a3;
+    --Blue-Violet-900: #312e81;
+    --Blue-Violet-950: #1e1b4b;
+    --Blue-Ribbon-950: rgb(23 42 84 / 100%);
+    --Blue-Ribbon-900: rgb(30 64 138 / 100%);
+    --Blue-Ribbon-800: rgb(30 75 175 / 100%);
+    --Blue-Ribbon-700: rgb(29 88 216 / 100%);
+    --Blue-Ribbon-600: rgb(37 99 235 / 100%);
+    --Blue-Ribbon-500: rgb(59 118 246);
+    --Blue-Ribbon-400: rgb(96 144 250);
+    --Blue-Ribbon-300: rgb(147 180 253 / 100%);
+    --Blue-Ribbon-200: rgb(191 211 254 / 100%);
+    --Blue-Ribbon-100: #dbe6fe;
+    --Blue-Ribbon-50: #eff9ff;
+    --Picton-Blue-950: #042f4d;
+    --Picton-Blue-900: #064b74;
+    --Picton-Blue-800: #005a8d;
+    --Picton-Blue-700: #006bab;
+    --Picton-Blue-600: #0086d4;
+    --Picton-Blue-500: #00aeff;
+    --Picton-Blue-400: #2cc0ff;
+    --Picton-Blue-300: #75d5ff;
+    --Picton-Blue-200: #b6e6ff;
+    --Picton-Blue-100: #def2ff;
+    --Picton-Blue-50: #eff9ff;
+    --Red-Violet-800: rgb(148 32 113 / 100%);
+    --Red-Violet-600: rgb(207 51 165 / 100%);
+    --Red-Violet-400: rgb(235 123 215 / 100%);
+    --Red-Violet-300: rgb(244 173 233 / 100%);
+    --Electric-Violet-50: #f7f3ff;
+    --Electric-Violet-100: #f1e9fe;
+    --Electric-Violet-200: #e5d6fe;
+    --Electric-Violet-300: #d0b5fd;
+    --Electric-Violet-400: #b48bfa;
+    --Electric-Violet-500: #955cf6;
+    --Electric-Violet-600: #7c3aed;
+    --Electric-Violet-700: #6928d9;
+    --Electric-Violet-800: #5821b6;
+    --Electric-Violet-900: #491d95;
+    --Electric-Violet-950: #2f1065;
+    --Chateau-Green-50: #f0fdf5;
+    --Chateau-Green-100: #dcfce8;
+    --Chateau-Green-200: #bbf7d1;
+    --Chateau-Green-300: #86efad;
+    --Chateau-Green-400: #4ade81;
+    --Chateau-Green-500: #22c55e;
+    --Chateau-Green-600: #16a34a;
+    --Chateau-Green-700: #15803c;
+    --Chateau-Green-800: #166533;
+    --Chateau-Green-900: #14532b;
+    --Chateau-Green-950: #052e14;
+    --Chateau-Green-gradient: linear-gradient(90deg, #18181b 0%, #27272a 34%, #15803c 84.5%, #052e14 100%);
+    --buttonFontSize: 16px;
+    --buttonLineHeight: 24px;
+    --buttonSmallPadding: 8px 16px;
+    --buttonPadding: 12px 24px;
+    --tg-theme-bg-color: #000;
+    --tg-theme-header-bg-color: #000;
+    --tg-theme-section-bg-color: #000;
+    --tg-theme-section-header-text-color: #000;
+    --tg-theme-text-color: #000;
+    --tg-theme-hint-color: #000;
+    --tg-theme-link-color: #000;
+    --tg-theme-button-color: #000;
+    --tg-theme-button-text-color: #000;
+    --tg-theme-secondary-bg-color: #000;
+    --tg-theme-accent-text-color: #000;
+    --tg-theme-subtitle-text-color: #000;
+    --tg-theme-destructive-text-color: #000;
+
+    --rarity-mainstream-acent: white;
+    --rarity-uncommon-acent: #77ff4d;
+    --Rarity-Rare: #4d8eff;
+    --rarity-legendary-acent: #ff961f;
+    --rarity-mythic-acent: #23ffda;
+
+    --rarity-uncommon-bg: rgba(119, 255, 77, 0.2);
+    --rarity-mythic-bg: rgba(35, 255, 218, 0.2);
+    --rarity-rare-bg: rgba(77, 142, 255, 0.2);
+    --rarity-legendary-bg: rgba(255, 150, 31, 0.2);
+    --rarity-mainstream-bg: rgba(255, 255, 255, 0.2);
+    --rarity-master-bg: rgba(255, 0, 98, 0.2);
+    --rarity-master-accent: #ff0062;
+}
+
+@media screen and (height <=700px) {
+    :root {
+        --buttonFontSize: 14px;
+        --buttonSmallPadding: 8px;
+        --buttonPadding: 8px;
+    }
+}
+
+@media screen and (width <=400px) {
+    :root {
+        --buttonSmallPadding: 8px 6px;
+        --buttonPadding: 12px;
+    }
+}
